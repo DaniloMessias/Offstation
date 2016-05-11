@@ -115,7 +115,7 @@ public class ControladorFormLogin implements Initializable {
 
     }
     
-    private void logar(){
+    private void logar(){//Logar aqui
      if ((this.txtLogin.getText().isEmpty()) ) {
 
             System.err.println("Login Vazio.");
