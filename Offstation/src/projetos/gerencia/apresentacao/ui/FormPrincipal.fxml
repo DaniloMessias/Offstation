@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetos.gerencia.apresentacao.ui.ControladorFormPrincipal">
+   <children>
+      <TabPane layoutY="25.0" prefHeight="406.0" prefWidth="627.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Produtos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="11.0" layoutY="110.0" text="Tipo" />
+                        <ComboBox fx:id="cbxTipoProduto" layoutX="75.0" layoutY="106.0" prefWidth="150.0" />
+                        <TextField fx:id="txtBuscaNomeProduto" layoutX="68.0" layoutY="14.0" prefHeight="25.0" prefWidth="212.0" promptText="Nome do Produto" />
+                        <Label layoutX="14.0" layoutY="18.0" text="Buscar" />
+                        <Button fx:id="btnBuscarProdutos" layoutX="504.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Buscar" />
+                        <TextField fx:id="txtBuscaCodProduto" layoutX="292.0" layoutY="14.0" prefHeight="25.0" prefWidth="193.0" promptText="Codigo do Produto" />
+                        <Separator layoutY="42.0" prefHeight="0.0" prefWidth="627.0" />
+                        <Button fx:id="btnListarProdutos" layoutX="505.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Listar" />
+                        <Separator layoutY="82.0" prefHeight="3.0" prefWidth="627.0" />
+                        <Label fx:id="labelNotificacao" layoutX="5.0" layoutY="87.0" prefHeight="8.0" prefWidth="618.0" text="Label" visible="false">
+                           <font>
+                              <Font name="Calibri Light Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <Rectangle fx:id="retanguloNotificacao" arcHeight="5.0" arcWidth="5.0" fill="#ff2b565e" height="19.0" layoutX="2.0" layoutY="84.0" stroke="#0000003f" strokeType="INSIDE" visible="false" width="621.0" />
+                        <TextField fx:id="txtIdProduto" layoutX="76.0" layoutY="140.0" prefHeight="25.0" prefWidth="413.0" promptText="ID do Produto" />
+                        <Label layoutX="11.0" layoutY="143.0" text="ID" />
+                        <Label layoutX="11.0" layoutY="179.0" text="Nome" />
+                        <TextField fx:id="txtNomeProduto" layoutX="76.0" layoutY="176.0" prefHeight="25.0" prefWidth="413.0" promptText="Nome do Produto" />
+                        <Label layoutX="10.0" layoutY="285.0" text="Marca" />
+                        <TextField fx:id="txtMarcaProduto" layoutX="75.0" layoutY="282.0" prefHeight="25.0" prefWidth="413.0" promptText="Marca do Produto" />
+                        <TextField fx:id="txtPrecoProduto" layoutX="75.0" layoutY="246.0" prefHeight="25.0" prefWidth="413.0" promptText="Preço do Produto" />
+                        <Label layoutX="10.0" layoutY="252.0" text="Preço" />
+                        <TextField fx:id="txtQuantidadeProduto" layoutX="75.0" layoutY="211.0" prefHeight="25.0" prefWidth="413.0" promptText="Quantidade do Produto" />
+                        <Label layoutX="10.0" layoutY="214.0" text="Quantidade" />
+                        <Button fx:id="btnAddProdutos" layoutX="292.0" layoutY="320.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="194.0" text="Adicionar novo Produto" />
+                        <TitledPane fx:id="expansorListaProdutos" animated="false" expanded="false" layoutX="1.0" layoutY="50.0" maxHeight="0.0" prefHeight="327.0" prefWidth="491.0" text="Lista de Produtos">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tabelaListaProdutos" prefHeight="300.0" prefWidth="488.0">
+                                      <columns>
+                                        <TableColumn prefWidth="74.0" text="Codigo" />
+                                        <TableColumn minWidth="0.0" prefWidth="249.0" text="Nome" />
+                                          <TableColumn minWidth="0.0" prefWidth="66.0" text="Preço" />
+                                          <TableColumn prefWidth="92.0" text="Quantidade" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Veículos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="506.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Listar" />
+                        <TextField layoutX="90.0" layoutY="97.0" prefHeight="25.0" prefWidth="397.0" promptText="ID do Veículo" />
+                        <Separator layoutX="1.0" layoutY="85.0" prefHeight="3.0" prefWidth="627.0" />
+                        <Separator layoutX="1.0" layoutY="45.0" prefHeight="0.0" prefWidth="627.0" />
+                        <TextField layoutX="293.0" layoutY="17.0" prefHeight="25.0" prefWidth="193.0" promptText="Codigo do Equipamento" />
+                        <Button layoutX="505.0" layoutY="17.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Buscar" />
+                        <Label layoutX="15.0" layoutY="21.0" text="Buscar" />
+                        <TextField layoutX="69.0" layoutY="17.0" prefHeight="25.0" prefWidth="212.0" promptText="Nome do Equipamento" />
+                        <Label layoutX="14.0" layoutY="101.0" text="ID" />
+                        <Label layoutX="14.0" layoutY="134.0" text="Proprietario" />
+                        <Label layoutX="14.0" layoutY="166.0" text="Placa" />
+                        <Label layoutX="14.0" layoutY="260.0" text="Saida" />
+                        <Label layoutX="14.0" layoutY="195.0" text="Descrição" />
+                        <Label layoutX="14.0" layoutY="229.0" text="Entrada" />
+                        <TextField layoutX="90.0" layoutY="160.0" prefHeight="25.0" prefWidth="397.0" promptText="Placa do Veículo" />
+                        <TextField layoutX="90.0" layoutY="191.0" prefHeight="25.0" prefWidth="397.0" promptText="Descrição do Veículo" />
+                        <TextField layoutX="90.0" layoutY="225.0" prefHeight="25.0" prefWidth="397.0" promptText="Data de Entrada na Oficina" />
+                        <TextField layoutX="90.0" layoutY="256.0" prefHeight="25.0" prefWidth="397.0" promptText="Data dePrevisão de Saida da Oficina" />
+                        <Button layoutX="90.0" layoutY="130.0" mnemonicParsing="false" text="Selecione" />
+                        <TitledPane fx:id="expansorListaPecas1" animated="false" expanded="false" layoutX="1.0" layoutY="54.0" prefHeight="325.0" prefWidth="485.0" text="Lista de Equipamentos">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tabelaListaVeiculos" prefHeight="300.0" prefWidth="483.0">
+                                       <columns>
+                                          <TableColumn prefWidth="74.0" text="Codigo" />
+                                          <TableColumn minWidth="0.0" prefWidth="249.0" text="Nome" />
+                                          <TableColumn minWidth="0.0" prefWidth="66.0" text="Preço" />
+                                          <TableColumn prefWidth="92.0" text="Quantidade" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Clientes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Separator layoutY="82.0" prefHeight="3.0" prefWidth="627.0" />
+                        <Button layoutX="505.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Listar" />
+                        <Separator layoutY="42.0" prefHeight="0.0" prefWidth="627.0" />
+                        <TextField layoutX="292.0" layoutY="14.0" prefHeight="25.0" prefWidth="193.0" promptText="Codigo do Equipamento" />
+                        <Button layoutX="504.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Buscar" />
+                        <Label layoutX="14.0" layoutY="18.0" text="Buscar" />
+                        <TextField layoutX="68.0" layoutY="14.0" prefHeight="25.0" prefWidth="212.0" promptText="Nome do Equipamento" />
+                        <Label layoutX="14.0" layoutY="97.0" text="ID" />
+                        <Label layoutX="14.0" layoutY="127.0" text="Nome" />
+                        <Label layoutX="14.0" layoutY="157.0" text="Sobrnome" />
+                        <Label layoutX="14.0" layoutY="185.0" text="Email" />
+                        <TextField layoutX="78.0" layoutY="93.0" prefHeight="25.0" prefWidth="409.0" promptText="ID do Cliente" />
+                        <TextField layoutX="78.0" layoutY="123.0" prefHeight="25.0" prefWidth="410.0" promptText="Nome do Cliente" />
+                        <TextField layoutX="78.0" layoutY="153.0" prefHeight="25.0" prefWidth="410.0" promptText="Sobrenome do Cliente" />
+                        <TextField layoutX="78.0" layoutY="181.0" prefHeight="25.0" prefWidth="410.0" promptText="Email do Cliente" />
+                        <TitledPane fx:id="expansorListaPecas2" animated="false" expanded="false" layoutX="2.0" layoutY="50.0" prefHeight="325.0" prefWidth="485.0" text="Lista de Equipamentos">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tabelaListaClientes" prefHeight="300.0" prefWidth="483.0">
+                                       <columns>
+                                          <TableColumn prefWidth="74.0" text="Codigo" />
+                                          <TableColumn minWidth="0.0" prefWidth="249.0" text="Nome" />
+                                          <TableColumn minWidth="0.0" prefWidth="66.0" text="Preço" />
+                                          <TableColumn prefWidth="92.0" text="Quantidade" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <MenuBar prefHeight="25.0" prefWidth="627.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Aquivo">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Sair" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ajuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Sobre" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Finalizar Sessão" />
+        </menus>
+      </MenuBar>
+   </children>
+</Pane>
